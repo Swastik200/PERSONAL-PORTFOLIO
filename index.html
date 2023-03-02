@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery/jquery-3.6.3.min.js">
+
+    </script>
+    <script>
+
+
+        $(document).ready(function () {
+
+            $(".nav-toggle").click(function () {
+                $(".head .nav").slideToggle()
+            });
+            $(".head .nav a").click(function () {
+                if ($(window).width() < 768) {
+                    $(".head .nav").slideToggle();
+                }
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $(".header").addClass("fixed");
+
+                }
+                else {
+                    $(".header").removeClass("fixed");
+                }
+            });
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="head">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="college-name">
+                    <a href="index.html">Portfolio</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#comprog">Competetive-Programming</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="home-section" id="home">
+        <div class="shp1"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="home-content">
+                    <h4>I'm Swastik Mishra</h4>
+                    <h1> Web-Developer </h1>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down-for">
+            <img src="icons/keydown.png" alt="">
+        </a>
+    </section>
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-img">
+                    <div class="img-box">
+                        <div class="shp2">
+                        </div>
+                        <img src="images/swas.jpg" alt="swas">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="row">
+                        <div class="section-title">
+                            <h1>About Me</h1>
+                        </div>
+                    </div>
+                    <p>Student at ITER,SOA UNIVERSITY,BHUBANESWAR || <br> WEB-DEV enthusiastic || <br>
+                        OPEN- SOURCE CONTRIBUTOR||<br>Aiming to leverage proven creative thinking, problem-solving, and
+                        teamwork skills to successfully fill the Software Development Engineer role at your company.
+                        Frequently praised as proactive by my peers, I can be relied upon to help your company
+                        achieve its goals.
+                    </p>
+                    <div class="stat">
+                        <div class="row">
+                            <div class="stats-boxing">
+                                <h2>3</h2>
+                                <h5>Core-Subjects</h5>
+                                <button class="b"><a href="pages/core.html">Clickhere</a></button>
+                            </div>
+                            <div class="stats-boxing">
+                                <h2>9</h2>
+                                <h5>Skills</h5>
+                                <button class="b1"><a href="pages/skill.html">Clickhere</a></button>
+                            </div>
+                            <div class="stats-boxing">
+                                <h2>2</h2>
+                                <h5>Project</h5>
+                                <button class="b2"><a href="pages/project.html">Click
+                                        here</a></button>
+                            </div>
+                            <div class="stats-boxing">
+                                <h2>5</h2>
+                                <h5>Certifications</h5>
+                                <button class="b3"><a href="pages/cert.html">Click
+                                        here</a></button>
+                            </div>
+                            <div class="stats-boxing">
+                                <h2>2</h2>
+                                <h5>Hobbies</h5>
+                                <button class="b4"><a href="pages/hobbies.html">Click
+                                        here</a></button>
+                            </div>
+                            <div class="stats-boxing" style="margin-left: 300px;">
+                                <h2>1</h2>
+                                <h5>Achievements</h5>
+                                <button class="b5"><a href="pages/achieve.html">Click
+                                        here</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="education" id="education">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Education</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="edu-details">
+                    <div class="edu-details-inner">
+                        <img src="images/puri.jpg" alt="bshsp" style="width: 115%;">
+                        <div class="overlay">
+                            <h4>SECONDARY-EDUCATION
+                                <p>BLESSED SACRAMENT HIGH SCHOOL,PURI <br>PERCENTAGE:85.83%</p>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-details">
+                    <div class="edu-details-inner">
+                        <img src="images/mps.jpg" alt="mps">
+                        <div class="overlay">
+                            <h4>SENIOR-SECONDARY-EDUCATION
+                                <p>MOTHERS PUBLIC SCHOOL,BHUBANESWAR <br>PERCENTAGE:80.33%</p>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-details">
+                    <div class="edu-details-inner">
+                        <img src="images/iter.jpg" alt="iter">
+                        <div class="overlay">
+                            <h4>GRADUATION
+                                <p>ITER,SOA-UNIVERSITY,BHUBANESWAR <br>CGPA:9.15(upto 4th sem)</p>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="comprog" id="comprog">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Competetive-Programming Profiles</h1>
+                    <ul style="list-style-type: disc;">
+                        <li>HACKERRANK
+                            <button class="b21"><a href="https://www.hackerrank.com/swastikmishra940">Click
+                                    Here</a></button>
+                        </li>
+                        <li>LEETCODE
+                            <button class="b22"><a href="https://leetcode.com/Swastikm/">Click Here</a></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-img">
+                    <div class="img-box">
+                        <div class="section-title">
+                            <h1>Contact me</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">
+                <div class="contact-form">
+                    <form class="form">
+                        <div class="row">
+                            <div class="left-input-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="Enter your name" class="input-control">
+                            </div>
+                            <div class="right-input-group">
+                                <label>Email or Phone</label>
+                                <input type="text" placeholder="Enter your email-id or phone-number"
+                                    class="input-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-group">
+                                <label>Message</label>
+                                <textarea class="input-control" placeholder="Enter your message here"
+                                    style="height: 140px; resize: none; padding-top: 12px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-btn">
+                            <button type="button" class="btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>-->
+            <div class="row">
+                <div class="contact-info">
+                    <div class="row">
+                        <div class="info-item">
+                            <h5>Address</h5>
+                            <p>bhimtangi housing colony <br>lane-19,bhubaneswar</p>
+                        </div>
+                        <div class="row">
+                            <div class="info-item" style="margin-left: 450px;">
+                                <h5>Phone-Number</h5>
+                                <p>+91 8895331944</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="social">
+                        <a href="#"><a href="https://mail.google.com/mail/u/0/#inbox"><img
+                                    src="images/gmail.jpeg"></a></a>
+                        <a href="#"><a href="https://www.linkedin.com/in/swastik-mishra-161067206/"> <img
+                                    src="images/link.jpeg"></a></a>
+                        <a href="#"><a href="https://github.com/Swastik200"><img src="images/git.jpeg"></a></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
